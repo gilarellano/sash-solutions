@@ -1,0 +1,423 @@
+<h1 id="1-introduction">1. Introduction</h1>
+
+<h2 id="11-purpose">1.1 Purpose</h2>
+
+<p>This document specifies the software requirements for the Quoting Software intended for Gilberto Arellano Windows LLC, which aims to streamline the process of generating quotes for custom wood windows.</p>
+
+<h2 id="12-scope">1.2 Scope</h2>
+
+<p>The software will provide functionalities for inputting window specifications, calculating costs, storing customer details, and generating quotes. While initially tailored for wood windows, the software aims to be scalable for all types of residential windows. Subsequent phases will include project management and analytics</p>
+
+<h2 id="13-definitions-acronyms-and-abbreviations">1.3 Definitions, Acronyms, and Abbreviations</h2>
+
+<ul>
+  <li><strong>SRS</strong>: Software Requirements Specification</li>
+  <li><strong>CRUD</strong>: Create, Read, Update, Delete</li>
+</ul>
+
+<h1 id="2-overall-description">2. Overall Description</h1>
+<h3 id="21-product-perspective">2.1 Product Perspective</h3>
+<p>The Gilberto Arellano Windows LLC Quoting Software is envisioned as a comprehensive tool to streamline the quote generation process for custom wood windows. While it will initially serve the immediate needs of Gilberto Arellano Windows LLC, the software is designed with scalability in mind, anticipating future enhancements and potential use by other window companies.</p>
+<h3 id="22-user-classes-and-characteristics">2.2 User Classes and Characteristics</h3>
+
+<ul>
+  <li><strong>Administrator</strong>: The primary user who will have full access to all features, including quote generation, project management, and analytics. This user will also have the ability to modify system settings and constants.</li>
+  <li><strong>(Future) Sales Team or Staff</strong>: Users who can generate and manage quotes but may not have access to system settings or high-level analytics.</li>
+</ul>
+
+<h3 id="23-operating-environment">2.3 Operating Environment</h3>
+<p>The software will initially be designed for desktop environments, with potential future adaptations for mobile and tablet devices. It will be web-based, ensuring accessibility from various devices without the need for dedicated installations.</p>
+
+<h3 id="24-design-and-implementation-constraints">2.4 Design and Implementation Constraints</h3>
+<p>Given the solo nature of the initial development, the software should prioritize simplicity and modularity. This ensures that future enhancements can be integrated seamlessly.</p>
+
+<h3 id="25-assumptions-and-dependencies">2.5 Assumptions and Dependencies</h3>
+<p>The software assumes that the pricing constants and other foundational data provided are accurate. Any third-party integrations in future phases will depend on the compatibility and availability of external APIs or services.</p>
+<h1 id="3-system-features--phases">3. System Features &amp; Phases</h1>
+
+<h2 id="phase-1-mvp">Phase 1: MVP</h2>
+
+<h3 id="311-quote-generation--retrieval">3.1.1 Quote Generation &amp; Retrieval</h3>
+
+<p><strong>Objective</strong>: Simplify and digitize the quote generation process.</p>
+
+<ul>
+  <li><strong>Input Window Specifications</strong>:
+    <ul>
+      <li>Users can input various window specifications, including dimensions, wood type, finish, hardware, glazing/glass, and custom design. Each window will have a unique identifier (<code class="language-plaintext highlighter-rouge">windowID</code>) for easy referencing.</li>
+    </ul>
+  </li>
+  <li><strong>Calculate Costs</strong>:
+    <ul>
+      <li>The system will automatically calculate costs based on the provided specifications.</li>
+    </ul>
+  </li>
+  <li><strong>Generate and Display Quotes</strong>:
+    <ul>
+      <li>Users can view the generated quote, which includes a detailed breakdown of costs. Each quote will have a unique identifier (<code class="language-plaintext highlighter-rouge">quoteID</code>) for easy referencing and tracking.</li>
+    </ul>
+  </li>
+  <li><strong>Save and Retrieve Quotes</strong>:
+    <ul>
+      <li>Users can save quotes for future reference and retrieve them as needed.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="phase-2-project-management-light">Phase 2: Project Management Light</h2>
+
+<p><strong>Objective</strong>: Introduce basic project management capabilities to enhance the software’s utility.</p>
+<h3 id="312-customer-management">3.1.2 Customer Management</h3>
+
+<ul>
+  <li><strong>Manage Customer Details</strong>:
+    <ul>
+      <li>Users can add, view, edit, and delete customer information.</li>
+    </ul>
+  </li>
+  <li><strong>Associate Quotes with Customers</strong>:
+    <ul>
+      <li>Saved quotes can be linked to specific customers, providing a consolidated view of all quotes related to a particular customer.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="313-project-status-tracking">3.1.3 Project Status Tracking</h3>
+
+<ul>
+  <li><strong>Track Project Progress</strong>:
+    <ul>
+      <li>Users can update the status of projects, marking them as “Pending”, “Approved”, “In Progress”, “Completed”, etc. Each project will have a unique identifier (<code class="language-plaintext highlighter-rouge">projectID</code>) for easy referencing and tracking.</li>
+    </ul>
+  </li>
+  <li><strong>Add Notes &amp; Comments</strong>:
+    <ul>
+      <li>Users can add relevant notes or comments to each project, providing context or additional information.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="314-attachments--files">3.1.4 Attachments &amp; Files</h3>
+
+<ul>
+  <li><strong>Associate Files with Projects</strong>:
+    <ul>
+      <li>Users can attach relevant files or images to quotes or projects, such as sketches, designs, or photos of existing windows.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="phase-3-analytics--trends">Phase 3: Analytics &amp; Trends</h2>
+
+<p><strong>Objective</strong>: Provide insights into business operations and customer preferences.</p>
+<h3 id="315-trends--analytics-dashboard">3.1.5 Trends &amp; Analytics Dashboard</h3>
+
+<ul>
+  <li><strong>View Business Insights</strong>:
+    <ul>
+      <li>Users can access a dashboard that provides insights into popular wood types, finishes, and other customer preferences.</li>
+    </ul>
+  </li>
+  <li><strong>Track Key Metrics</strong>:
+    <ul>
+      <li>The dashboard will also display metrics like average quote values, number of quotes generated, project completion rates, etc.</li>
+    </ul>
+  </li>
+  <li><strong>Visual Data Representation</strong>:
+    <ul>
+      <li>Data will be presented using charts, graphs, and other visual tools for easy interpretation.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="316-historical-data-retrieval">3.1.6 Historical Data Retrieval</h3>
+
+<ul>
+  <li><strong>Access Past Data</strong>:
+    <ul>
+      <li>Users can retrieve past quotes and projects based on specific criteria, such as date range, customer, or project status.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="4-external-interface-requirements">4. External Interface Requirements</h1>
+
+<h2 id="41-user-interfaces">4.1 User Interfaces</h2>
+
+<h3 id="phase-1-mvp-1">Phase 1: MVP</h3>
+
+<ul>
+  <li><strong>Desktop Interface</strong>:
+    <ul>
+      <li>Simple, clean UI focusing on quote generation, retrieval, and detailed breakdown.</li>
+      <li>Basic login mechanism for user authentication.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="phase-2-project-management-light-1">Phase 2: Project Management Light</h3>
+
+<ul>
+  <li><strong>Enhanced Desktop Interface</strong>:
+    <ul>
+      <li>Additional sections/modules for customer management, project status tracking, and file attachments.</li>
+      <li>Improved navigation to switch between quote generation and project management seamlessly.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="phase-3-analytics--trends-1">Phase 3: Analytics &amp; Trends</h3>
+
+<p><strong>Analytics Dashboard</strong>:</p>
+<ul>
+  <li>Visual representations (charts, graphs) integrated into the UI for easier data interpretation.</li>
+  <li>Search and filter options for historical data retrieval.</li>
+</ul>
+
+<h2 id="42-software-interfaces">4.2 Software Interfaces</h2>
+
+<h3 id="phase-1-mvp-2">Phase 1: MVP</h3>
+
+<ul>
+  <li><strong>Database</strong>: CRUD operations focused on quote generation, storage, and retrieval.</li>
+  <li><strong>Backend</strong>: Handling quote calculations, storage, and retrieval.</li>
+  <li><strong>Frontend</strong>: Quote generation form, list of saved quotes, and detailed breakdown view.</li>
+</ul>
+
+<h3 id="phase-2-project-management-light-2">Phase 2: Project Management Light</h3>
+
+<ul>
+  <li><strong>Database</strong>: Extended CRUD operations for customer details, project status, and file attachments.</li>
+  <li><strong>Backend</strong>: Additional endpoints for customer management and project tracking.</li>
+  <li><strong>Frontend</strong>: Enhanced UI components for customer management and project tracking.</li>
+</ul>
+
+<h3 id="phase-3-analytics--trends-2">Phase 3: Analytics &amp; Trends</h3>
+
+<ul>
+  <li><strong>Database</strong>: Queries optimized for analytics and trends.</li>
+  <li><strong>Backend</strong>: Endpoints for analytics data retrieval.</li>
+  <li><strong>Frontend</strong>: Dashboard components for visual data representation.</li>
+</ul>
+
+<h1 id="5-non-functional-requirements">5. Non-functional Requirements</h1>
+
+<h2 id="51-performance">5.1 Performance</h2>
+
+<h3 id="phase-1-mvp-3">Phase 1: MVP</h3>
+
+<ul>
+  <li><strong>Response Time</strong>: Instant quote generation and retrieval.</li>
+  <li><strong>Scalability</strong>: Designed for a single user but keeping future scalability in mind.</li>
+</ul>
+
+<h3 id="phase-2--3">Phase 2 &amp; 3</h3>
+
+<ul>
+  <li><strong>Enhanced Scalability</strong>: As more features are added, ensure the system remains responsive and can handle additional data and users.</li>
+</ul>
+
+<h2 id="52-security">5.2 Security</h2>
+
+<h3 id="phase-1-mvp-4">Phase 1: MVP</h3>
+
+<ul>
+  <li><strong>Authentication</strong>: Basic login mechanism for user authentication.</li>
+  <li><strong>Data Encryption</strong>: Basic encryption for stored quotes.</li>
+</ul>
+
+<h3 id="phase-2--3-1">Phase 2 &amp; 3</h3>
+
+<ul>
+  <li><strong>Enhanced Authorization</strong>: Role-based access as more user types might be introduced, especially in the context of project management.</li>
+</ul>
+
+<h2 id="53-reliability">5.3 Reliability</h2>
+
+<h3 id="phase-1-mvp-5">Phase 1: MVP</h3>
+
+<ul>
+  <li><strong>Data Integrity</strong>: Ensure accurate quote calculations and storage.</li>
+</ul>
+
+<h3 id="phase-2--3-2">Phase 2 &amp; 3</h3>
+
+<ul>
+  <li><strong>Data Backup</strong>: As more data gets added (customer details, projects), implement more frequent data backup strategies.</li>
+</ul>
+
+<h2 id="54-usability">5.4 Usability</h2>
+
+<h3 id="phase-1-mvp-6">Phase 1: MVP</h3>
+
+<ul>
+  <li><strong>User-Friendly Interface</strong>: Intuitive UI for quote generation and retrieval.</li>
+</ul>
+
+<h3 id="phase-2--3-3">Phase 2 &amp; 3</h3>
+
+<ul>
+  <li><strong>Enhanced Navigation</strong>: Improved UI components for seamless navigation between different modules.</li>
+</ul>
+
+<h2 id="55-maintainability">5.5 Maintainability</h2>
+
+<h3 id="across-all-phases">Across All Phases</h3>
+
+<ul>
+  <li><strong>Modularity</strong>: Design the system in a modular fashion, allowing for easy updates and modifications.</li>
+  <li><strong>Documentation</strong>: Maintain clear documentation for each phase, detailing new features and changes.</li>
+</ul>
+
+<h1 id="6-use-cases--user-stories">6. Use Cases &amp; User Stories</h1>
+
+<h2 id="61-use-cases">6.1 Use Cases</h2>
+
+<h3 id="use-case-1-generate-a-new-quote">Use Case 1: Generate a New Quote</h3>
+
+<p><strong>Primary Actor</strong>: Administrator
+<strong>Scope</strong>: Quote Generation Module<br />
+<strong>Level</strong>: User Goal</p>
+
+<p><strong>Brief</strong>:<br />
+The user inputs window specifications and the system calculates and displays a quote.</p>
+
+<p><strong>Flow of Events</strong>:</p>
+<ol>
+  <li>The user logs into the system.</li>
+  <li>The user navigates to the “Generate Quote” section.</li>
+  <li>The user inputs window specifications, including dimensions, wood type, finish, hardware, glazing/glass, and special design. Each window inputted is assigned a unique <code class="language-plaintext highlighter-rouge">windowID</code>.</li>
+  <li>The system calculates the cost based on the provided specifications.</li>
+  <li>The system displays the generated quote with a detailed breakdown of costs. The generated quote is assigned a unique <code class="language-plaintext highlighter-rouge">quoteID</code>.</li>
+  <li>The user has the option to save the quote for future reference.</li>
+</ol>
+
+<p><strong>Extensions</strong>:</p>
+<ul>
+  <li>3a. If the user inputs invalid data, the system prompts the user to correct it.</li>
+</ul>
+
+<hr />
+
+<h3 id="use-case-2-retrieve-and-edit-a-saved-quote">Use Case 2: Retrieve and Edit a Saved Quote</h3>
+
+<p><strong>Primary Actor</strong>: Administrator
+<strong>Scope</strong>: Quote Retrieval Module<br />
+<strong>Level</strong>: User Goal</p>
+
+<p><strong>Brief</strong>:<br />
+The user retrieves a previously saved quote and makes edits if necessary.</p>
+
+<p><strong>Flow of Events</strong>:</p>
+<ol>
+  <li>The user logs into the system.</li>
+  <li>The user navigates to the “Saved Quotes” section.</li>
+  <li>The user selects a quote from the list using the <code class="language-plaintext highlighter-rouge">quoteID</code>.</li>
+  <li>The system displays the details of the selected quote.</li>
+  <li>The user edits the quote details as needed.</li>
+  <li>The system recalculates the quote based on the edits.</li>
+  <li>The user saves the updated quote.</li>
+</ol>
+
+<p><strong>Extensions</strong>:</p>
+<ul>
+  <li>5a. If the user inputs invalid data during editing, the system prompts the user to correct it.</li>
+</ul>
+
+<hr />
+
+<h2 id="62-user-stories">6.2 User Stories</h2>
+
+<h3 id="user-story-1-">User Story 1 :</h3>
+<p><strong>As</strong> an administrator,<br />
+<strong>I want</strong> to input window specifications,<br />
+<strong>So that</strong> I can generate a detailed quote for a customer.</p>
+
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+  <li>The system should allow input for dimensions, wood type, finish, hardware, glazing/glass, and special design.</li>
+  <li>The system should display a quote based on the inputted specifications.</li>
+  <li>The quote should include a detailed breakdown of costs.</li>
+</ul>
+
+<hr />
+
+<h3 id="user-story-2">User Story 2:</h3>
+<p><strong>As</strong> an administrator,<br />
+<strong>I want</strong> to retrieve and edit saved quotes,<br />
+<strong>So that</strong> I can make necessary changes based on updated requirements or corrections.</p>
+
+<p><strong>Acceptance Criteria</strong>:</p>
+<ul>
+  <li>The system should list all saved quotes.</li>
+  <li>The user should be able to select a quote and view its details using the <code class="language-plaintext highlighter-rouge">quoteID</code>.</li>
+  <li>The user should be able to edit the quote details.</li>
+  <li>The system should recalculate the quote based on the edits.</li>
+</ul>
+
+<h1 id="7-appendices">7. Appendices</h1>
+
+<h2 id="appendix-a-glossary">Appendix A: Glossary</h2>
+
+<p><strong>Administrator</strong>: The primary user of the system, responsible for generating and managing quotes.</p>
+
+<p><strong>API</strong>: Application Programming Interface - a set of tools and protocols that allow different software applications to communicate with each other.</p>
+
+<p><strong>CRUD</strong>: Create, Read, Update, Delete - basic functions of persistent storage.</p>
+
+<p><strong>Quote</strong>: An estimated cost for a specific set of window specifications.</p>
+
+<p><strong>Window Specifications</strong>: The details and attributes of a window, including dimensions, wood type, finish, hardware, glazing/glass, and special design.</p>
+
+<hr />
+
+<h2 id="appendix-b-references">Appendix B: References</h2>
+
+<ol>
+  <li>San Francisco Historic Building Codes: [Link to the official website or document]</li>
+  <li>Window Constants Source: [Link or reference to where the window constants are derived from]</li>
+</ol>
+
+<hr />
+
+<h2 id="appendix-c-revision-history">Appendix C: [[Revision History]]</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Version</th>
+      <th>Date</th>
+      <th>Description of Changes</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.0</td>
+      <td>10/09/2023</td>
+      <td>Initial draft</td>
+      <td>Gilberto A.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="8-index">8. Index</h1>
+
+<h2 id="a">A</h2>
+<p>Administrator, 2, 6<br />
+API, 3, 7<br />
+Appendices, 8</p>
+
+<h2 id="c">C</h2>
+<p>CRUD, 3, 7<br />
+Customer Management, 4</p>
+
+<h2 id="q">Q</h2>
+<p>Quote, 2, 6<br />
+Quote Generation, 3<br />
+Quote Retrieval, 4</p>
+
+<h2 id="w">W</h2>
+<p>Window Specifications, 2, 6</p>
