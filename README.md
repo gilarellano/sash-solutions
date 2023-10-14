@@ -20,6 +20,6 @@ Check out the [documentation](https://gilarellano.github.io/sash-solutions/) for
 
 ## Contact
 
-Should you have any questions or wish to discuss this project further, please reach out:
+Should you have any questions or wish to discuss this project further, please reach out :
 - [Email](mailto:gilarellano1996@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/gilbertoarellano/) 
