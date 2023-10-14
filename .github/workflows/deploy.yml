@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'quartz/**' # triggers action only when there is a change in quartz/
-    
 
 permissions:
   contents: read
