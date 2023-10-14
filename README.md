@@ -16,7 +16,7 @@ The software began as a CLI tool. The current objective is to transform it into 
 - **Integration & Testing**: Ensure seamless integration of all components and conduct rigorous testing to identify and rectify any issues.
 - **Deployment and Development**: Set up an infrastructure for continuous development, testing, and deployment, potentially leveraging cloud services for scalability and performance.
 
-Check out the [documentation](https://gilarellano.github.io/window-quoting-software/) for a detailed insight into the software's architecture, requirements, design decisions, and more.
+Check out the [documentation](https://gilarellano.github.io/sash-solutions/) for a detailed insight into the software's architecture, requirements, design decisions, and more.
 
 ## Contact
 
