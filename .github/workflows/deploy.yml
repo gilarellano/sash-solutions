@@ -3,10 +3,9 @@ name: Deploy Quartz site to GitHub Pages
 on:
   push:
     branches:
-      # - main # Enable if you want it to run for every commit to the main branch
-      - v4
+      - main
     paths:
-      - 'quartz/**'
+      - 'quartz/**' # triggers action only when there is a change in quartz/
     
 
 permissions:
