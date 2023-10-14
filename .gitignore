@@ -1,8 +1,6 @@
-# ignore all .exe files
 *.exe
-
-# ignore all .o files
+*.DS_Store
 *.o
 
 # ignore all files in the bin directory
-/bin/*
+./bin/*
