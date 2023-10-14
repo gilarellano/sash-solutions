@@ -20,18 +20,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          submodules: 'recursive'
           fetch-depth: 0 # Fetch all history for git info
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14
+      - name: Debug list files
+        run: ls -al
+        working-directory: ./quartz
       - name: Install Dependencies
-        run: |
-          cd quartz
-          npm ci
+        run: npm ci
+        working-directory: ./quartz
       - name: Build Quartz
-        run: |
-          cd quartz
-          npx quartz build
+        run: npx quartz build
+        working-directory: ./quartz
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
